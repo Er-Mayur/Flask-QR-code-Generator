@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR code</title>
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'style.css')}}">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body class="flex flex-col min-h-screen justify-center items-center bg-gray-300 p-5">
+    <p class="font-bold text-2xl mb-3">Your QR Code</p>
+    <img id="image" src="data:image/png;base64, {{img_str}}" alt="QRCode">
+    <p class="mb-3 mt-3 font-bold text-blue-500">Generate another QR Code</p>
+    <div class="flex gap-2">
+        <div class="flex bg-blue-500 px-3 py-1 rounded text-center gap-2">
+            <i class='bxr bx-arrow-in-down-square-half text-white text-xl'></i>
+            <a href="data:image/png;base64, {{img_str}}" download="QR code" class="text-white">Download QR Code</a>
+        </div>
+        <div class="flex bg-green-600 px-3 py-1 rounded text-center gap-2">
+            <i class='bxr bx-share text-white text-xl'></i>
+            <button onclick="share()" class="text-white">Share QR Code</button>
+        </div>
+    </div>
+    <script>
+        share = async () => {
+            image = document.getElementById('image')
+            image_url = image.src
+            fetch(image_url).then(
+                res => res.blob()
+            ).then(
+                blob => {
+                    file = new File([blob], 'QR.png', { type: 'image/png' })
+                    navigator.share(
+                        {
+                            title: 'QR code',
+                            text: 'Share your qr code',
+                            files: [file]
+
+                        }
+                    )
+                }
+            )
+
+
+        }
+    </script>
+
+</body>
+
+
+
+</html>
