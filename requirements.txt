@@ -3,6 +3,6 @@ click
 itsdangerous
 Jinja2
 MarkupSafe
-Werzeug
+Werkzeug
 binker
 qrcode[pil]
