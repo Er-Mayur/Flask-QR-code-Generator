@@ -10,10 +10,10 @@
 </head>
 
 <body class="flex flex-col min-h-screen justify-center items-center bg-gray-300 p-5">
-    <p class="font-bold text-2xl mb-3">Your QR Code</p>
+    <p class="font-bold md:text-2xl text-xl mb-3">Your QR Code</p>
     <img id="image" src="data:image/png;base64, {{img_str}}" alt="QRCode">
-    <p class="mb-3 mt-3 font-bold text-blue-500">Generate another QR Code</p>
-    <div class="flex gap-2">
+    <a href="/" class="mb-3 mt-3 font-bold text-blue-500">Generate another QR Code</a>
+    <div class="flex md:flex-row flex-col gap-2">
         <div class="flex bg-blue-500 px-3 py-1 rounded text-center gap-2">
             <i class='bxr bx-arrow-in-down-square-half text-white text-xl'></i>
             <a href="data:image/png;base64, {{img_str}}" download="QR code" class="text-white">Download QR Code</a>
