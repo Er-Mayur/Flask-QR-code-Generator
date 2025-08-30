@@ -4,5 +4,7 @@ itsdangerous
 Jinja2
 MarkupSafe
 Werkzeug
-binker
+blinker
 qrcode[pil]
+Pillow
+vercel-wsgi
