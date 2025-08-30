@@ -9,6 +9,12 @@ A minimal, elegant **Flask** application to generate QR codes from any text or U
 
 ---
 
+## 🚀 Live Demo
+
+👉 Try it here: [https://flask-qr-code-generator-mocha.vercel.app/](https://flask-qr-code-generator-mocha.vercel.app/)
+
+---
+
 ## ✨ Features
 
 - 🔳 Generate QR codes for any text/URL
@@ -25,6 +31,7 @@ A minimal, elegant **Flask** application to generate QR codes from any text or U
 - **Backend:** Python, Flask
 - **QR Generation:** `qrcode` (Pillow backend)
 - **Frontend:** HTML, CSS (utility classes), a pinch of vanilla JS
+- **Hosting:** [Vercel](https://vercel.com/)
 
 ---
 
@@ -39,7 +46,7 @@ Flask-QR-code-Generator/
 │   └── (images, icons, etc.)
 ├── templates/
 │   ├── index.html        # Input form
-│   └── qrcode.html           # Preview + actions
+│   └── qrcode.html       # Preview + actions
 └── screenshots/
     ├── 01-home.png
     └── 02-generated.png
@@ -47,7 +54,7 @@ Flask-QR-code-Generator/
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Getting Started (Local Setup)
 
 ### 1) Clone the repo
 ```bash
@@ -102,12 +109,6 @@ Open your browser at **http://127.0.0.1:5000**.
 
 ---
 
-## ⚙️ Configuration Notes
-
-- **PNG Size / Border / Error Correction** are typically configured where the QR image is generated (e.g., `qrcode.QRCode(...)`). If you want to tweak the size or error correction level, adjust the QR creation code in `app.py`.
-- If you use `.env` files in your environment and encounter a `dotenv` import error, either install `python-dotenv` or remove the implicit loader. For this project, no `.env` is required by default.
-
----
 
 ## 🙌 Acknowledgements
 
@@ -115,4 +116,3 @@ Open your browser at **http://127.0.0.1:5000**.
 - Thanks to everyone who reports issues, improves styling, or adds ideas.
 
 ---
-
