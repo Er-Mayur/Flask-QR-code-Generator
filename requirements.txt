@@ -1,2 +1,8 @@
-flask
+Flask
+click
+itsdangerous
+Jinja2
+MarkupSafe
+Werzeug
+binker
 qrcode[pil]
